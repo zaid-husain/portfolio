@@ -115,7 +115,6 @@ Portfolio/
 │   │   ├── Contact.tsx        # Contact & conversion destination
 │   │   ├── Education.tsx      # Education section
 │   │   ├── Experience.tsx     # Professional experience section
-│   │   ├── FAQ.tsx            # Frequently asked questions section
 │   │   ├── Focus.tsx          # Current focus section
 │   │   ├── OpenSource.tsx     # Open source contributions section
 │   │   ├── Philosophy.tsx     # Engineering philosophy section
@@ -128,7 +127,6 @@ Portfolio/
 │   │   ├── capabilities.ts
 │   │   ├── education.ts
 │   │   ├── experience.ts
-│   │   ├── faq.ts
 │   │   ├── focus.ts
 │   │   ├── opensource.ts
 │   │   ├── projects.ts
@@ -248,7 +246,6 @@ Content is strongly typed and managed via static TypeScript files in `src/data/`
 - `Project`: Defines full case study structure including metrics, tech stack breakdown, and engineering decisions.
 - `ExperienceItem`: Work history, achievements, and impact metrics.
 - `ArchitectureSystem`: System design paradigms and trade-offs.
-- `FAQItem`: Frequently asked questions and answers.
 
 ---
 

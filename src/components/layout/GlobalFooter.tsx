@@ -23,65 +23,68 @@ export function GlobalFooter() {
             </p>
           </div>
 
-          {/* Navigation Column */}
-          <nav className={styles.navColumn} aria-label="Footer Navigation">
-            <h3 className={styles.columnTitle}>Navigation</h3>
-            <ul className={styles.linkList}>
-              <li><Link href="/about" className={styles.footerLink}>About</Link></li>
-              <li><Link href="/projects" className={styles.footerLink}>Projects</Link></li>
-              <li><Link href="/experience" className={styles.footerLink}>Experience</Link></li>
-              <li><Link href="/contact" className={styles.footerLink}>Contact</Link></li>
-              <li>
-                <a href="/resume.png" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                  Resume <span className={styles.arrow} aria-hidden="true">↗</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          {/* Navigation Columns Group */}
+          <div className={styles.navGroup}>
+            {/* Navigation Column */}
+            <nav className={styles.navColumn} aria-label="Footer Navigation">
+              <h3 className={styles.columnTitle}>Navigation</h3>
+              <ul className={styles.linkList}>
+                <li><Link href="/about" className={styles.footerLink}>About</Link></li>
+                <li><Link href="/projects" className={styles.footerLink}>Projects</Link></li>
+                <li><Link href="/experience" className={styles.footerLink}>Experience</Link></li>
+                <li><Link href="/contact" className={styles.footerLink}>Contact</Link></li>
+                <li>
+                  <a href="/resume.png" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                    Resume <span className={styles.arrow} aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
 
-          {/* Projects Column */}
-          <nav className={styles.navColumn} aria-label="Projects">
-            <h3 className={styles.columnTitle}>Projects</h3>
-            <ul className={styles.linkList}>
-              <li>
-                <a href={SEO.PROJECTS.ZASHLY.URL} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                  Zashly <span className={styles.arrow} aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href={SEO.PROJECTS.ZASHIO.URL} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                  Zashio <span className={styles.arrow} aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href={SEO.PROJECTS.ZASHUB.URL} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                  Zashub <span className={styles.arrow} aria-hidden="true">↗</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+            {/* Projects Column */}
+            <nav className={styles.navColumn} aria-label="Projects">
+              <h3 className={styles.columnTitle}>Projects</h3>
+              <ul className={styles.linkList}>
+                <li>
+                  <a href={SEO.PROJECTS.ZASHLY.URL} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                    Zashly <span className={styles.arrow} aria-hidden="true">↗</span>
+                  </a>
+                </li>
+                <li>
+                  <a href={SEO.PROJECTS.ZASHIO.URL} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                    Zashio <span className={styles.arrow} aria-hidden="true">↗</span>
+                  </a>
+                </li>
+                <li>
+                  <a href={SEO.PROJECTS.ZASHUB.URL} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                    Zashub <span className={styles.arrow} aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
 
-          {/* Connect Column */}
-          <nav className={styles.navColumn} aria-label="Social Links">
-            <h3 className={styles.columnTitle}>Connect</h3>
-            <ul className={styles.linkList}>
-              <li>
-                <a href={SEO.SOCIAL.GITHUB} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                  GitHub <span className={styles.arrow} aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href={SEO.SOCIAL.LINKEDIN} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                  LinkedIn <span className={styles.arrow} aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:zaidquazi412@gmail.com" className={styles.footerLink}>
-                  Email
-                </a>
-              </li>
-            </ul>
-          </nav>
+            {/* Connect Column */}
+            <nav className={styles.navColumn} aria-label="Social Links">
+              <h3 className={styles.columnTitle}>Connect</h3>
+              <ul className={styles.linkList}>
+                <li>
+                  <a href={SEO.SOCIAL.GITHUB} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                    GitHub <span className={styles.arrow} aria-hidden="true">↗</span>
+                  </a>
+                </li>
+                <li>
+                  <a href={SEO.SOCIAL.LINKEDIN} target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                    LinkedIn <span className={styles.arrow} aria-hidden="true">↗</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:zaidquazi412@gmail.com" className={styles.footerLink}>
+                    Email
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
 
         {/* Bottom Copyright Row */}

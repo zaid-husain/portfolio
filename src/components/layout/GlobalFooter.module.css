@@ -21,14 +21,17 @@
 }
 
 .topSection {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
 }
 
 @media (min-width: 768px) {
   .topSection {
-    grid-template-columns: 2.2fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: var(--space-12);
   }
 }
@@ -39,6 +42,29 @@
   flex-direction: column;
   gap: var(--space-4);
   max-width: 440px;
+  flex: 1 1 320px;
+}
+
+/* Nav Columns Container - Responsive Grid / Flex */
+.navGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6) var(--space-4);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .navGroup {
+    display: flex;
+    gap: var(--space-12);
+    width: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .navGroup {
+    gap: var(--space-5) var(--space-2);
+  }
 }
 
 .brandHeader {

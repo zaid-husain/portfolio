@@ -8,11 +8,9 @@ import { Experience } from "../components/Experience";
 import { Education } from "../components/Education";
 import { Achievements } from "../components/Achievements";
 import { Contact } from "../components/Contact";
-import { FAQ } from "../components/FAQ";
 import { Button } from "../components/ui/Button";
 import { ResumeButton } from "../components/ui/ResumeButton";
 import { SEO } from "../data/seo.constants";
-import { faqs } from "../data/faq";
 
 export const metadata: Metadata = {
   title: `${SEO.PERSON_NAME} — ${SEO.JOB_TITLE} | Creator of Zashly, Zashio & Zashub`,
@@ -28,26 +26,9 @@ export const metadata: Metadata = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
-
 export default function Home() {
   return (
     <main id="main-content" className={styles.container} aria-label={`${SEO.PERSON_NAME} Portfolio Home`}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <div className={styles.main}>
         {/* 1. HERO SECTION */}
         <section id="hero" aria-label="Introduction" className={styles.hero}>
@@ -112,10 +93,7 @@ export default function Home() {
         {/* 7. ACHIEVEMENTS & CERTIFICATIONS */}
         <Achievements />
 
-        {/* 8. FAQ */}
-        <FAQ />
-
-        {/* 9. CONTACT */}
+        {/* 8. CONTACT */}
         <Contact />
       </div>
     </main>
