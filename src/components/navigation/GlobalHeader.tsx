@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { MobileMenu } from './MobileMenu';
-import { NavDropdown } from './NavDropdown';
 import styles from './GlobalHeader.module.css';
 import { SEO } from '../../data/seo.constants';
 
@@ -55,27 +54,9 @@ export function GlobalHeader() {
             <ul className={styles.navList}>
               <li><Link href="/about" className={styles.navLink}>About</Link></li>
               <li><Link href="/projects" className={styles.navLink}>Projects</Link></li>
-              <li><Link href="/experience" className={styles.navLink}>Experience</Link></li>
+              <li><Link href="/#skills" className={styles.navLink}>Skills</Link></li>
               <li><Link href="/contact" className={styles.navLink}>Contact</Link></li>
-              <li><NavDropdown /></li>
             </ul>
-            <div className={styles.actions}>
-              <button 
-                className={styles.commandButton} 
-                aria-label="Open command palette"
-                onClick={() => document.dispatchEvent(new CustomEvent('open-command-palette'))}
-              >
-                <span className={styles.searchIcon}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="M21 21l-4.3-4.3" strokeLinecap="round" />
-                  </svg>
-                </span>
-                <span className={styles.commandShortcut}>
-                  <kbd>⌘</kbd><kbd>K</kbd>
-                </span>
-              </button>
-            </div>
           </nav>
 
           <button 

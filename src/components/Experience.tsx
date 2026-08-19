@@ -73,9 +73,27 @@ export function Experience() {
   };
 
   useEffect(() => {
-    updateSvgPaths();
-    window.addEventListener('resize', updateSvgPaths);
-    return () => window.removeEventListener('resize', updateSvgPaths);
+    const handleResize = () => updateSvgPaths();
+    
+    // Initial calculation after a short delay to ensure DOM is painted
+    const timer = setTimeout(handleResize, 50);
+    
+    window.addEventListener('resize', handleResize);
+    
+    // Watch for content changes that affect layout (e.g. adding/removing milestones)
+    let observer: ResizeObserver;
+    if (containerRef.current) {
+      observer = new ResizeObserver(() => {
+        requestAnimationFrame(handleResize);
+      });
+      observer.observe(containerRef.current);
+    }
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+      if (observer) observer.disconnect();
+    };
   }, []);
 
   // Measure SVG main path total length

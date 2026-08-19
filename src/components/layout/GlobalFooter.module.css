@@ -1,7 +1,7 @@
 .footer {
   border-top: 1px solid var(--border-subtle);
   background-color: var(--surface-primary);
-  padding: var(--space-20, 80px) 0 var(--space-10, 40px);
+  padding: var(--space-8, 32px) 0 var(--space-6, 24px);
   margin-top: auto;
 }
 
@@ -17,7 +17,7 @@
   padding: 0 var(--space-8);
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--space-6);
 }
 
 .topSection {
@@ -115,7 +115,7 @@
 .navColumn {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-2);
 }
 
 .columnTitle {
@@ -134,7 +134,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
 }
 
 .footerLink {
@@ -186,9 +186,9 @@
 .bottomSection {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
   border-top: 1px solid var(--border-subtle);
-  padding-top: var(--space-8);
+  padding-top: var(--space-4);
 }
 
 @media (min-width: 640px) {

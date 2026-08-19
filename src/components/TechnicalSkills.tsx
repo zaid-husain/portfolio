@@ -100,9 +100,7 @@ const domainsData: DomainCategory[] = [
 const growthJourneySteps = [
   "Python",
   "MERN Stack",
-  "Full Stack",
-  "DevOps",
-  "MLOps"
+  "Full Stack"
 ];
 
 export function TechnicalSkills() {

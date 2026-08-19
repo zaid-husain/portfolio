@@ -17,7 +17,7 @@ export const education = {
 export const academicFocus = [
   {
     area: "Core Computer Science & Engineering",
-    details: "Focused on Data Structures, Algorithms, Database Management Systems, and Object-Oriented Programming using Python and C++."
+    details: "Focused on Data Structures, Algorithms, Database Management Systems, and Object-Oriented Programming using Python."
   },
   {
     area: "Practical Engineering Leadership",

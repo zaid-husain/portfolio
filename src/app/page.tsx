@@ -53,8 +53,6 @@ export default function Home() {
               <div className={`${styles.ctaGroup} ${styles.cinematicReveal} ${styles.delay4}`}>
                 <Button href="#work" variant="primary" size="lg">Explore Projects</Button>
                 <ResumeButton />
-                <Button href={SEO.SOCIAL.GITHUB} variant="ghost" size="md" target="_blank" rel="noopener noreferrer">GitHub ↗</Button>
-                <Button href={SEO.SOCIAL.LINKEDIN} variant="ghost" size="md" target="_blank" rel="noopener noreferrer">LinkedIn ↗</Button>
               </div>
             </div>
 
