@@ -281,6 +281,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .mobileOnlyResume {
+    display: none !important;
+  }
+}
+
 .subtitle {
   font-size: var(--text-body-large);
   color: var(--text-secondary);

@@ -10,24 +10,31 @@
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   animation: fadeIn 0.25s ease-out forwards;
 }
 
 .menu {
   position: relative;
-  width: 85vw;
-  max-width: 340px;
+  width: 88vw;
+  max-width: 360px;
   height: 100%;
   background-color: var(--surface-primary);
   border-left: 1px solid var(--border-subtle);
   box-shadow: var(--elevation-overlay);
   display: flex;
   flex-direction: column;
-  padding: calc(var(--space-6) + var(--safe-top)) var(--space-5) calc(var(--space-6) + var(--safe-bottom)) var(--space-5);
-  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  padding: calc(var(--space-5) + var(--safe-top)) var(--space-6) calc(var(--space-6) + var(--safe-bottom)) var(--space-6);
+  animation: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   overflow-y: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .menu {
+    background-color: #0d0d0d;
+    border-left-color: rgba(255, 255, 255, 0.08);
+  }
 }
 
 .menuHeader {
@@ -39,36 +46,36 @@
   margin-bottom: var(--space-4);
 }
 
-.menuTitle {
+.menuLogo {
   font-family: var(--font-hero);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  text-decoration: none;
 }
 
 .closeButton {
-  background: var(--surface-secondary);
+  background-color: var(--surface-secondary);
   border: 1px solid var(--border-subtle);
   color: var(--text-primary);
   cursor: pointer;
-  padding: var(--space-2);
+  padding: 0;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.closeButton:hover {
+.closeButton:hover,
+.closeButton:focus-visible {
   background-color: var(--surface-tertiary);
   border-color: var(--border-strong);
-}
-
-.closeButton:focus-visible {
-  outline: 2px solid var(--accent);
+  transform: scale(1.05);
+  outline: none;
 }
 
 .linkList {
@@ -77,80 +84,115 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
-  flex: 1;
+  gap: var(--space-2);
 }
 
-.linkList a {
-  font-family: var(--font-body);
-  font-size: 1.05rem;
+.animatedItem {
+  opacity: 0;
+  transform: translateX(12px);
+  animation: itemSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.navItem {
+  font-family: var(--font-hero);
+  font-size: 1.15rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   text-decoration: none;
+  letter-spacing: -0.01em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 14px;
-  border-radius: var(--radius-md);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  min-height: 48px;
 }
 
-.linkList a:hover,
-.linkList a:focus-visible {
+.navItem:hover,
+.navItem:focus-visible {
   background-color: var(--surface-secondary);
   color: var(--text-primary);
+  transform: translateX(4px);
   outline: none;
+}
+
+.navItemActive {
+  background-color: var(--surface-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .arrowIcon {
   color: var(--text-tertiary);
-  opacity: 0.6;
+  opacity: 0.5;
   transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
 }
 
-.linkList a:hover .arrowIcon {
-  transform: translateX(3px);
+.navItem:hover .arrowIcon,
+.navItem:focus-visible .arrowIcon {
+  transform: translateX(4px);
   opacity: 1;
   color: var(--text-primary);
 }
 
-.badge {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+.ctaWrapper {
+  margin-top: var(--space-6);
+  padding: var(--space-2) 0;
+}
+
+.resumeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: var(--radius-full);
+  background-color: var(--text-primary);
+  color: var(--surface-primary);
+  font-family: var(--font-hero);
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #3b82f6;
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.25);
-  padding: 2px 7px;
-  border-radius: var(--radius-sm);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+.resumeButton:hover,
+.resumeButton:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+  outline: none;
 }
 
 .menuFooter {
   margin-top: auto;
   padding-top: var(--space-6);
   border-top: 1px solid var(--border-subtle);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
 }
 
 .socialRow {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 .socialLink {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.825rem;
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.socialLink:hover {
+.socialLink:hover,
+.socialLink:focus-visible {
   color: var(--text-primary);
+  outline: none;
 }
 
 .dot {
@@ -166,4 +208,25 @@
 @keyframes slideIn {
   from { transform: translateX(100%); }
   to { transform: translateX(0); }
+}
+
+@keyframes itemSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .menu,
+  .animatedItem {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }

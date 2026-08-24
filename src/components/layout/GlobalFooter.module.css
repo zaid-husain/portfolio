@@ -23,7 +23,7 @@
 .topSection {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-6);
 }
 
 @media (min-width: 768px) {
@@ -41,8 +41,14 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
-  max-width: 440px;
-  flex: 1 1 320px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .brandColumn {
+    max-width: 440px;
+    flex: 1 1 320px;
+  }
 }
 
 /* Nav Columns Container - Responsive Grid / Flex */

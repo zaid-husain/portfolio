@@ -2,9 +2,9 @@
 
 import styles from './ResumeButton.module.css';
 
-export function ResumeButton() {
+export function ResumeButton({ className }: { className?: string }) {
   return (
-    <div className={styles.splitBtn} role="group" aria-label="Resume options">
+    <div className={`${styles.splitBtn} ${className || ''}`} role="group" aria-label="Resume options">
       {/* Left half — View */}
       <a
         href="/resume.png"

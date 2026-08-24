@@ -8,7 +8,7 @@ import { Experience } from "../components/Experience";
 import { Education } from "../components/Education";
 import { Achievements } from "../components/Achievements";
 import { Contact } from "../components/Contact";
-import { Button } from "../components/ui/Button";
+import { ExploreProjectsButton } from "../components/ui/ExploreProjectsButton";
 import { ResumeButton } from "../components/ui/ResumeButton";
 import { SEO } from "../data/seo.constants";
 
@@ -51,8 +51,8 @@ export default function Home() {
               </p>
 
               <div className={`${styles.ctaGroup} ${styles.cinematicReveal} ${styles.delay4}`}>
-                <Button href="#work" variant="primary" size="lg">Explore Projects</Button>
-                <ResumeButton />
+                <ExploreProjectsButton href="#work" />
+                <ResumeButton className={styles.mobileOnlyResume} />
               </div>
             </div>
 
