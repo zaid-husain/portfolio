@@ -111,11 +111,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* Drawer Footer with Socials */}
         <div className={styles.menuFooter}>
           <div className={styles.socialRow}>
-            <a href="https://github.com/zaidquazi" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <a href="https://github.com/zaid-husain" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
               GitHub ↗
             </a>
             <span className={styles.dot} aria-hidden="true">•</span>
-            <a href="https://www.linkedin.com/in/zaid-husain-329596257/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <a href="https://www.linkedin.com/in/zaid-husain/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
               LinkedIn ↗
             </a>
           </div>
