@@ -58,8 +58,8 @@ export function CommandPalette() {
     { id: 'achievements', label: 'Go to Credentials & Achievements', action: () => { router.push('/#achievements'); closePalette(); } },
     { id: 'contact', label: 'Go to Contact', action: () => { router.push('/#contact'); closePalette(); } },
     { id: 'resume', label: 'Open Resume', action: () => { window.open(SEO.RESUME_URL, '_blank', 'noopener,noreferrer'); closePalette(); } },
-    { id: 'github', label: 'Open GitHub Profile', action: () => { window.open('https://github.com/zaidquazi', '_blank'); closePalette(); } },
-    { id: 'linkedin', label: 'Open LinkedIn Profile', action: () => { window.open('https://www.linkedin.com/in/zaid-husain-329596257/', '_blank'); closePalette(); } },
+    { id: 'github', label: 'Open GitHub Profile', action: () => { window.open('https://github.com/zaid-husain/', '_blank'); closePalette(); } },
+    { id: 'linkedin', label: 'Open LinkedIn Profile', action: () => { window.open('https://www.linkedin.com/in/zaid-husain/', '_blank'); closePalette(); } },
     { id: 'email', label: 'Send Email Direct', action: () => { window.open('mailto:zaidquazi412@gmail.com'); closePalette(); } },
   ];
 
