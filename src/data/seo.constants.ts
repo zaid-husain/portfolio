@@ -9,6 +9,7 @@ export const SEO = {
   },
   EMAIL: "zaidquazi412@gmail.com",
   PHONE: "+91 93099 38127", // Use only in UI, not in schema for privacy
+  RESUME_URL: "https://drive.google.com/file/d/1yvLzQRGISI1XP_KiYYx-P5g6S-QUDJp7/view?usp=sharing",
   SOCIAL: {
     GITHUB: "https://github.com/zaid-husain",
     LINKEDIN: "https://www.linkedin.com/in/zaid-husain/"

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
+import { SEO } from '../../data/seo.constants';
 import styles from './MobileMenu.module.css';
 
 interface MobileMenuProps {
@@ -106,7 +107,32 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           })}
         </ul>
 
-
+        {/* Drawer Resume CTA */}
+        <div className={styles.ctaWrapper}>
+          <a
+            href={SEO.RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.resumeButton}
+            aria-label="View Resume on Google Drive"
+            onClick={onClose}
+          >
+            <span>Resume</span>
+            <svg 
+              width="14" 
+              height="14" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              aria-hidden="true"
+            >
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
+        </div>
 
         {/* Drawer Footer with Socials */}
         <div className={styles.menuFooter}>

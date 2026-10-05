@@ -150,9 +150,9 @@ export function GlobalHeader() {
 
             {/* Resume Pill CTA Button */}
             <a 
-              href="/resume.png" 
+              href={SEO.RESUME_URL} 
               className={styles.resumeButton}
-              aria-label="View Resume"
+              aria-label="View Resume on Google Drive"
               target="_blank"
               rel="noopener noreferrer"
             >

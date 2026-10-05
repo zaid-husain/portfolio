@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useCommandPaletteShortcut } from '../../hooks/useCommandPaletteShortcut';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
+import { SEO } from '../../data/seo.constants';
 import styles from './CommandPalette.module.css';
 
 interface Command {
@@ -56,7 +57,7 @@ export function CommandPalette() {
     { id: 'exp', label: 'Go to Professional Experience', action: () => { router.push('/#experience'); closePalette(); } },
     { id: 'achievements', label: 'Go to Credentials & Achievements', action: () => { router.push('/#achievements'); closePalette(); } },
     { id: 'contact', label: 'Go to Contact', action: () => { router.push('/#contact'); closePalette(); } },
-    { id: 'resume', label: 'Open Resume', action: () => { window.open('/resume.png', '_blank'); closePalette(); } },
+    { id: 'resume', label: 'Open Resume', action: () => { window.open(SEO.RESUME_URL, '_blank', 'noopener,noreferrer'); closePalette(); } },
     { id: 'github', label: 'Open GitHub Profile', action: () => { window.open('https://github.com/zaidquazi', '_blank'); closePalette(); } },
     { id: 'linkedin', label: 'Open LinkedIn Profile', action: () => { window.open('https://www.linkedin.com/in/zaid-husain-329596257/', '_blank'); closePalette(); } },
     { id: 'email', label: 'Send Email Direct', action: () => { window.open('mailto:zaidquazi412@gmail.com'); closePalette(); } },

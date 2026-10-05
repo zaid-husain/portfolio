@@ -1,17 +1,18 @@
 'use client';
 
+import { SEO } from '../../data/seo.constants';
 import styles from './ResumeButton.module.css';
 
 export function ResumeButton({ className }: { className?: string }) {
   return (
     <div className={`${styles.splitBtn} ${className || ''}`} role="group" aria-label="Resume options">
-      {/* Left half — View */}
+      {/* View Resume */}
       <a
-        href="/resume.png"
+        href={SEO.RESUME_URL}
         target="_blank"
         rel="noopener noreferrer"
         className={styles.half}
-        aria-label="View resume in new tab"
+        aria-label="View resume on Google Drive"
       >
         <span className={styles.icon}>
           {/* Eye icon */}

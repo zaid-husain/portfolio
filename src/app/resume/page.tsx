@@ -7,9 +7,10 @@ import { Education } from "../../components/Education";
 import { Achievements } from "../../components/Achievements";
 import { Contact } from "../../components/Contact";
 import { Button } from "../../components/ui/Button";
+import { SEO } from "../../data/seo.constants";
 import styles from "./page.module.css";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://zaidhusainonline.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.zaidhusain.me";
 
 export const metadata: Metadata = {
   title: "Zaid Husain | Resume & Full Stack Portfolio",
@@ -77,7 +78,7 @@ export default function ResumePage() {
           <h1 className={styles.resumeTitle}>Zaid Husain</h1>
           <p className={styles.resumeSubtitle}>Full Stack Developer</p>
           <div className={styles.resumeActions}>
-            <Button href="/resume.png" variant="primary" target="_blank" rel="noopener noreferrer">
+            <Button href={SEO.RESUME_URL} variant="primary" target="_blank" rel="noopener noreferrer">
               View / Download Resume
             </Button>
             <Button href="/#contact" variant="secondary">
